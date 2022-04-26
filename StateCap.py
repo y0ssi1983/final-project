@@ -120,9 +120,9 @@ def test_capital_to_state():
 #        get_state('')
 
 
-def main():
-    return pytest.main(__file__)
+#def main():
+#    return pytest.main(__file__)
 
 
-if __name__ == '__main__':
-    sys.exit(main())
+#if __name__ == '__main__':
+#    sys.exit(main())
