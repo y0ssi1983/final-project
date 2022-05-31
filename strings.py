@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.8
+
 """With this string:
 'monty pythons flying circus'
 Create a function that returns a sorted string with no duplicate characters
@@ -9,17 +11,31 @@ Create a function that returns a list of 4 character strings:
 Example: ['mont', 'y py', 'thon', 's fl', 'ying', ' cir', 'cus']
 ### git comment
 """
-import pytest
+#import pytest
 
+## Question 1
 def no_duplicates(a_string):
+    a_string = sorted(a_string)
+    dup = ""
+    for char in a_string:
+        if char not in dup:
+            dup = dup + char
+    return dup
     pass
 
-
+## Question 2
 def reversed_words(a_string):
+    list_words = a_string.split()
+    return list_words[::-1]
     pass
 
-
+## Question 3
 def four_char_strings(a_string):
+    split_string = []
+    n = 4
+    for index in range(0, len(a_string), n):
+        split_string.append(a_string[index : index + n])
+    return split_string
     pass
 
 
